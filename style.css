@@ -1,0 +1,84 @@
+/* =========================================================
+   ESTILOS PERSONALIZADOS - PORTAFOLIO INTERACTIVO NAHIR
+   Estética: Cyber-Security / Dark Modern / Developer Console
+   ========================================================= */
+
+/* Cursor parpadeante estilo terminal */
+.cursor-blink {
+    display: inline-block;
+    color: #00f2fe;
+    font-weight: 700;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Efecto sutil de scanline tipo monitor CRT retro-hacker */
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    z-index: 40;
+    pointer-events: none;
+    opacity: 0.15;
+}
+
+/* Scrollbar personalizada con estilo futurista */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00f2fe;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+/* Pestañas activas del Laboratorio */
+.lab-tab-btn.active {
+    background-color: #1e293b;
+    color: #00f2fe;
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
+}
+
+/* Efecto glow al pasar el ratón sobre tarjetas */
+.group:hover {
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.08);
+}
+
+/* Animación de entrada de línea en la terminal */
+.term-line-enter {
+    animation: fadeInLine 0.2s ease-out forwards;
+}
+
+@keyframes fadeInLine {
+    from {
+        opacity: 0;
+        transform: translateY(3px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los inputs con foco cibernético */
+input:focus, textarea:focus {
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
